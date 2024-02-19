@@ -1,0 +1,574 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Ubuntu-Regular";
+  src: url("fonts/Ubuntu-Regular.ttf");
+  font-weight: normal;
+}
+HTML, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  padding-bottom: 11px;
+  font-family: "Ubuntu-Regular", sans-serif;
+  color: #000000;
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 36px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 11px;
+  font-family: "Ubuntu-Regular", sans-serif;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  display: none;
+}
+
+#navbar {
+  box-sizing: border-box;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 26px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.navbar__logo img {
+  width: 40px;
+  height: 39px;
+}
+.navbar__logo a {
+  display: flex;
+}
+
+.navbar__icons {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar__icons img {
+  height: 31px;
+}
+
+.navbar__icon {
+  display: flex;
+}
+.navbar__icon:not(.navbar__icon#navbar-open, .navbar__icon#navbar-close) {
+  margin-right: 20px;
+}
+
+#navbar-open img {
+  height: 25px;
+}
+
+#navbar-close {
+  display: none;
+  width: 41px;
+}
+
+.navbar__menu {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  top: 60px;
+  right: 0;
+  background-color: #F36F21;
+  height: 100%;
+}
+.navbar__menu a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 45px auto;
+  white-space: nowrap;
+  padding: 8px 8px 8px 32px;
+  display: block;
+  transition: 0.3s;
+}
+
+#about {
+  position: relative;
+  padding-top: 70px;
+  padding-left: 26px;
+  padding-right: 26px;
+  display: flex;
+  flex-direction: column;
+}
+#about button {
+  font-family: "Ubuntu-Regular", sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 2px solid #F36F21;
+  border-radius: 100px;
+  width: 262px;
+  height: 40px;
+  margin-bottom: 45px;
+  margin-top: 11px;
+}
+
+#stories {
+  padding: 45px 26px 26px;
+  background: #ECECEC;
+  scroll-margin-top: 45px;
+}
+#stories button {
+  font-family: "Ubuntu-Regular", sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 2px solid #F36F21;
+  border-radius: 100px;
+  width: 166px;
+  height: 40px;
+}
+#stories h2 {
+  padding-bottom: 26px;
+}
+#stories .container-button {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+#stories .stories__images {
+  display: flex;
+  justify-content: space-between;
+  height: 265px;
+}
+#stories .stories__images div {
+  width: 50%;
+}
+#stories .stories__column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+#stories .stories__column-left div {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+#stories .stories__column-left .stories__image-top {
+  background-image: url("img/emmanuel-akinte-Yx4v3sWfeAo-unsplash.jpg");
+  margin-bottom: 10px;
+}
+#stories .stories__column-left .stories__image-bottom {
+  background-image: url("img/mike-baker-3Y366aqddJ0-unsplash.jpg");
+  margin-top: 10px;
+}
+#stories .stories__column-right {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("img/brooke-cagle-oTweoxMKdkA-unsplash.jpg");
+  margin-left: 10px;
+}
+
+.about__images {
+  display: flex;
+  justify-content: center;
+}
+
+.about__mobile-image {
+  background-image: url("img/naassom-azevedo-Q_Sei-TqSlc-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 203px;
+  width: 213px;
+  position: absolute;
+  left: 28px;
+  top: 13px;
+  box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+.about__background {
+  align-self: center;
+  background-color: #F36F21;
+  margin-top: 23px;
+  width: 268px;
+  height: 182px;
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.about__desktop-image {
+  display: none;
+}
+
+.stories__desktop-image {
+  display: none;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modal__content {
+  position: relative;
+  top: 10%;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  height: 180px;
+  background-color: #F36F21;
+  color: #FFFFFF;
+}
+.modal__content .modal__close {
+  width: 20px;
+  height: 20px;
+  left: 973px;
+  top: 270px;
+  background-color: #F36F21;
+  border: none;
+  padding: 0;
+}
+
+.modal__content-header {
+  display: flex;
+  flex-direction: column;
+}
+.modal__content-header button {
+  display: flex;
+  align-self: end;
+}
+.modal__content-header h4 {
+  margin: 5px 0 20px;
+  font-family: "Ubuntu-Regular", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.modal__content-header .modal__title-name {
+  word-break: break-word;
+}
+
+.modal__content-input label {
+  font-family: "Ubuntu-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 10px;
+}
+.modal__content-input input {
+  width: 100%;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 29px;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1439px) and (min-width: 1024px) {
+  .about__images {
+    width: 60%;
+  }
+  .about__text {
+    width: 40%;
+    padding-left: 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 57px;
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 43px;
+  }
+  #navbar {
+    position: relative;
+    padding: 11px 90px;
+    height: 80px;
+  }
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+  }
+  .navbar__logo img {
+    width: 54px;
+    height: 54px;
+  }
+  .navbar__logo a {
+    display: contents;
+  }
+  .navbar__icons {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  #navbar-open {
+    display: none;
+  }
+  #navbar-close {
+    display: none;
+  }
+  .navbar__icon#search {
+    display: flex;
+    height: 35px;
+    width: 35px;
+  }
+  .navbar__icon#search a {
+    display: contents;
+  }
+  .navbar__icons .navbar__icon#heart {
+    display: flex;
+    height: 35px;
+    width: 35px;
+    margin-right: 0;
+  }
+  .navbar__icons .navbar__icon#heart a {
+    display: contents;
+  }
+  .navbar__menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    position: relative;
+    top: 0;
+    right: 0;
+    background-color: #FFFFFF;
+    height: 100%;
+    z-index: 1;
+    padding-top: 0;
+  }
+  .navbar__menu a {
+    text-align: center;
+    margin: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    padding: 8px;
+  }
+  #about {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 80px 90px;
+  }
+  #about button:hover {
+    background: #F36F21;
+    border: 2px solid #F36F21;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  #stories {
+    padding-left: 90px;
+    padding-right: 90px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #stories button:hover {
+    background: #F36F21;
+    border: 2px solid #F36F21;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  }
+  #stories .stories__text {
+    width: 50%;
+    padding-right: 100px;
+  }
+  #stories .stories__text h2 {
+    font-size: 30px;
+    line-height: 43px;
+    padding-right: 200px;
+  }
+  #stories .stories__images {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+  }
+  #stories .stories__images .stories__desktop-image {
+    width: 33%;
+  }
+  #stories .stories__images .stories__column-left {
+    width: 33%;
+  }
+  #stories .stories__images .stories__column-right {
+    width: 33%;
+  }
+  #stories .stories__column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 0;
+  }
+  #stories .stories__column-left div {
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+  }
+  #stories .stories__column-left .stories__image-top {
+    background-image: url("img/emmanuel-akinte-Yx4v3sWfeAo-unsplash.jpg");
+    margin-bottom: 10px;
+  }
+  #stories .stories__column-left .stories__image-bottom {
+    background-image: url("img/mike-baker-3Y366aqddJ0-unsplash.jpg");
+    margin-top: 10px;
+  }
+  #stories .stories__column-right {
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    background-image: url("img/brooke-cagle-oTweoxMKdkA-unsplash.jpg");
+    margin-left: 20px;
+  }
+  #stories .stories__desktop-image {
+    display: block;
+    background-image: url("img/benigno-hoyuela-72zsd_fnxYc-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    margin-right: 20px;
+  }
+  .about__images {
+    display: flex;
+    justify-content: center;
+  }
+  .about__background {
+    position: relative;
+    align-self: center;
+    background-color: #F36F21;
+    height: 330px;
+    width: 330px;
+    margin-top: 23px;
+    margin-bottom: 26px;
+  }
+  .about__desktop-image {
+    display: block;
+    background-image: url("img/husna-miskandar-FC4z3l4sUYc-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: -30px;
+    left: -90px;
+    width: 380px;
+    height: 307px;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+  .about__mobile-image {
+    position: absolute;
+    left: 60px;
+    top: 70px;
+    width: 380px;
+    height: 307px;
+    box-shadow: -2px 2px 5px 2px rgba(0, 0, 0, 0.15);
+  }
+  .container-button {
+    justify-content: flex-start;
+  }
+  .modal__content {
+    width: 655px;
+    height: 335px;
+    margin: 10% auto;
+    top: 0;
+  }
+  .modal__content-input {
+    margin-top: 30px;
+  }
+  .modal__content-input input {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    font-family: "Ubuntu-Regular", sans-serif;
+    padding-left: 20px;
+    margin-top: 10px;
+  }
+  .modal__content-input label {
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 20px;
+  }
+  .modal__content-header h4 {
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .about__images {
+    width: 50%;
+  }
+  .about__text {
+    width: 50%;
+    padding-left: 20px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

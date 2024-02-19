@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <link href="styles.css" rel="stylesheet"/>
+
+    <title>FED Test</title>
+</head>
+<body>
+<div id="overlay"></div>
+<nav id="navbar">
+    <div class="navbar__logo">
+        <a href="#">
+            <img src="img/logo.png" alt="Company Logo"></a>
+    </div>
+
+    <div class="navbar__icons">
+        <div id="menu" class="navbar__menu">
+            <a href="#about">About us</a>
+            <a href="#stories">Our stories</a>
+            <a href="#values">Our values</a>
+        </div>
+        <div class="navbar__icon" id="search">
+            <img src="img/search_icon.png" alt="Search Icon">
+        </div>
+        <div class="navbar__icon" id="heart">
+            <img src="img/heart_icon.png" alt="Heart Icon">
+        </div>
+        <div class="navbar__icon" id="navbar-open">
+            <img src="img/menu_icon.png" alt="Menu Icon">
+        </div>
+        <div class="navbar__icon" id="navbar-close">
+            <img src="img/close_black.png" alt="Close Icon">
+        </div>
+    </div>
+</nav>
+
+<section id="about">
+    <div class="about__images">
+        <div class="about__background">
+            <div class="about__desktop-image">
+            </div>
+            <div class="about__mobile-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="about__text">
+        <h1>Working together to make a
+            better tomorrow!</h1>
+        <h2>Breaking down the barriers and opening opportunities.</h2>
+        <div class="container-button">
+            <button type="button" id="register">
+                Click here to register your interest
+            </button>
+        </div>
+    </div>
+
+</section>
+<section id="stories">
+    <div class="stories__text">
+        <h2>There’s more than just one
+            way to make a difference.</h2>
+        <span>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus..</span>
+        <div class="container-button">
+            <button type="button" id="more">
+                Find out more here
+            </button>
+        </div>
+    </div>
+
+    <div class="stories__images">
+        <div class="stories__desktop-image"></div>
+        <div class="stories__column stories__column-left">
+            <div class="stories__image-top"></div>
+            <div class="stories__image-bottom"></div>
+        </div>
+        <div class="stories__column stories__column-right"></div>
+    </div>
+</section>
+<section id="values"></section>
+
+<div id="modal" class="modal">
+    <div class="modal__content">
+        <div class="modal__content-header">
+            <button type="button" class="modal__close">
+                <img src="img/close_modal.png" alt="Close Icon">
+            </button>
+            <h4 class="modal__title">Welcome <span class="modal__title-name">{name placeholder}</span></h4>
+        </div>
+
+        <div class="modal__content-input">
+            <label for="name"> Please enter your name </label> <br>
+            <input type="text" name="name" id="name" size="15" maxlength="40" required/>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
