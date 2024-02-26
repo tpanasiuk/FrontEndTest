@@ -327,7 +327,7 @@ h2 {
   box-sizing: border-box;
 }
 
-@media only screen and (max-width: 1439px) and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
   .about__images {
     width: 60%;
   }
@@ -422,7 +422,7 @@ h2 {
     justify-content: space-between;
     padding: 80px 90px;
   }
-  #about button:hover {
+  #about button:hover, #about button:focus {
     background: #F36F21;
     border: 2px solid #F36F21;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
@@ -435,7 +435,7 @@ h2 {
     flex-direction: row;
     justify-content: space-between;
   }
-  #stories button:hover {
+  #stories button:hover, #stories button:focus {
     background: #F36F21;
     border: 2px solid #F36F21;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);

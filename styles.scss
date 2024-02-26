@@ -6,6 +6,13 @@ $background-color_grey: #ECECEC;
 $open-sans: 'Open Sans', sans-serif;
 $ubuntu-regular: 'Ubuntu-Regular', sans-serif;
 
+@mixin header {
+  margin: 0;
+  padding-bottom: 11px;
+  font-family: $ubuntu-regular;
+  color: $black;
+}
+
 @mixin button {
   font-family: $ubuntu-regular;
   font-size: 14px;
@@ -19,11 +26,10 @@ $ubuntu-regular: 'Ubuntu-Regular', sans-serif;
   border-radius: 100px;
 }
 
-@mixin header {
-  margin: 0;
-  padding-bottom: 11px;
-  font-family: $ubuntu-regular;
-  color: $black;
+@mixin button-hover {
+  background: #F36F21;
+  border: 2px solid #F36F21;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 @mixin background-cover {
@@ -360,7 +366,7 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 1439px) and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
   .about__images {
     width: 60%;
   }
@@ -462,10 +468,9 @@ h2 {
     padding: 80px 90px;
 
     button {
-      &:hover {
-        background: #F36F21;
-        border: 2px solid #F36F21;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+      &:hover,
+      &:focus {
+        @include button-hover;
       }
     }
   }
@@ -478,10 +483,9 @@ h2 {
     justify-content: space-between;
 
     button {
-      &:hover {
-        background: #F36F21;
-        border: 2px solid #F36F21;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+      &:hover,
+      &:focus {
+        @include button-hover;
       }
     }
 
