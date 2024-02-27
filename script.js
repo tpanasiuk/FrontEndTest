@@ -1,8 +1,8 @@
+//Navigation bar
 const mainNav = document.getElementById("menu");
 const navBarOpen = document.getElementById("navbar-open");
 const navBarClose = document.getElementById("navbar-close");
 const menuLinks = document.querySelectorAll("#menu a");
-const overlay = document.getElementById("overlay");
 
 let isNavOpen = false;
 
@@ -45,11 +45,25 @@ window.addEventListener("click", function (event) {
     }
 });
 
+//Resizing the screen
+window.addEventListener("resize", function (event) {
+    if (window.innerWidth >= 1024) {
+        navBarClose.style.display = "none";
+        navBarOpen.style.display = "none";
+        mainNav.style.width = "100%";
+    } else {
+        navBarOpen.style.display = "flex";
+        mainNav.style.width = "0";
+    }
+})
+
+//Modal window
 const modal = document.getElementById("modal");
 const btnRegister = document.getElementById("register");
 const closeModalBtn = document.getElementsByClassName("modal__close")[0];
 let nameInput = document.getElementById("name");
 let modalTitleName = document.getElementsByClassName("modal__title-name")[0];
+const overlay = document.getElementById("overlay");
 
 function closeModal() {
     modal.style.display = "none";
@@ -59,6 +73,7 @@ function closeModal() {
 function openModal() {
     modal.style.display = "block";
     overlay.style.display = "block";
+    nameInput.focus();
 }
 
 btnRegister.onclick = function () {
